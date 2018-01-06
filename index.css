@@ -58,7 +58,8 @@ li a {
 }
 
 li a:hover:not(.active) {
-   background-color: #555;
+   background-color: #C8CFDF;
+   font-weight: 500;
    color: red;
 }
 
