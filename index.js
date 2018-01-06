@@ -2,7 +2,7 @@ const crypto = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,LTC,
 const starts = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD";
 const histo = "https://api.coindesk.com/v1/bpi/historical/close.json";
 const calcExchange = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,GBP,CNY,JPY,EUR,TWD,JPY,RUB,CHF,CAD,AUD,SGD";
-const news = "https://newsapi.org/v2/top-headlines?q=bitcoin&language=en&apiKey=29b9b388e7c142329c131bb139ff5429"
+const news = "https://newsapi.org/v2/top-headlines?q=bitcoin&sortBy=popularity&language=en&apiKey=29b9b388e7c142329c131bb139ff5429"
 
 function handleNavigation() {
    // select nav elements on"click'
@@ -215,21 +215,21 @@ function showNews(results) {
    <a class="title" href="${results.articles[0].url}" target="_blank">${results.articles[0].title}<alt="${results.articles[0].description}"></a><br /><br /><br />
    
    
-    <a class="link" href="${results.articles[1].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[1].urlToImage}"></a><br />
+   <a class="link" href="${results.articles[1].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[1].urlToImage}"></a><br />
    
    <a class="title" href="${results.articles[1].url}" target="_blank">${results.articles[1].title} <alt="${results.articles[1].description}"></a><br /><br /><br />
    
   
-    <a class="link" href="${results.articles[2].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[2].urlToImage}"></a><br />
+   <a class="link" href="${results.articles[2].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[2].urlToImage}"></a><br />
    
    <a class="title" href="${results.articles[2].url}" target="_blank">${results.articles[2].title}<alt="${results.articles[2].description}"></a><br /><br /><br />
    
    
-    <a class="link" href="${results.articles[3].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[3].urlToImage}"></a><br />
+   <a class="link" href="${results.articles[3].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[3].urlToImage}"></a><br />
    
    <a class="title" href="${results.articles[3].url}" target="_blank">${results.articles[3].title}<alt="${results.articles[3].description}"></a><br /><br />
    
-       <a class="link" href="${results.articles[4].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[4].urlToImage}"></a><br />
+   <a class="link" href="${results.articles[4].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[4].urlToImage}"></a><br />
    
    <a class="title" href="${results.articles[4].url}" target="_blank">${results.articles[4].title} <alt="${results.articles[4].description}"></a><br /><br /><br />
   

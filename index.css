@@ -1,9 +1,13 @@
+* {
+   box-sizing: border-box;
+}
+
 html {
    overflow-y: scroll;
 }
 
 body {
-   background-image: url("https://ak7.picdn.net/shutterstock/videos/31077397/thumb/1.jpg");
+   background-image: url("https://images.unsplash.com/photo-1491186751821-59a0a1bd73f1?auto=format&fit=crop&w=2550&q=80");
    font-weight: 800;
    position: static;
    background-size: 100%;
@@ -17,6 +21,7 @@ body {
    display: inline-block;
    width: 80px;
    height: 60px;
+   float: left;
 }
 
 li {
@@ -88,7 +93,6 @@ h1 {
    font-weight: 800;
    border: 7px ridge #007fAA;
    max-width: 500px;
-   min-width: 500px;
    margin: 20px auto;
 }
 
@@ -100,7 +104,7 @@ table {
    background-color: #ffffff;
    border: 5px solid #007fAA;
    max-width: 500px;
-   min-width: 500px;
+  
 }
 
 th {

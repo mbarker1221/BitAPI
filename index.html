@@ -9,7 +9,7 @@
    <link href="index.css" rel="stylesheet" type="text/css">
    <link href="datepicker.css" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Nunito:300i" rel="stylesheet">
-   <title>Capstone Bitcoin Api for Thinkful</title>
+   <title>Bitcoin data tracker, exchange calculator and news feed</title>
 </head>
 
 <body>
@@ -21,16 +21,16 @@
             <a data-page="start-page" href="#"><img class="icon" src="http://cfile7.uf.tistory.com/image/2254FD4658D34FC5461F11" alt="bitcoin logo" /></a>
             <li><a data-page="news-page" class="menu" id="news-page" href="#" onclick="getNews()">News</a></li>
             <li><a data-page="calc-page" class="menu" id="calc-page" href="#">Exchange</a></li>
-             <li><a data-page="crypto-page" class="menu" id="crypto-page" href="#" onclick="fetchCryptoExchangeRates()">Crypto</a></li>
+            <li><a data-page="crypto-page" class="menu" id="crypto-page" href="#" onclick="fetchCryptoExchangeRates()">Crypto</a></li>
             <li><a data-page="history-page" class="menu" id="history-page" href="#">Historic</a></li>
             <li><a data-page="start-page" class="menu" id="start-page" href="#">Home</a></li>
-       </nav>
+         </nav>
       </section>
 
 
       <section class="start-page page">
          <h1>BITMETRICS</h1>
-         <p class="subheader2">Bitcoin Tracker and Exchange Calculator </p>
+         <p class="subheader2">Bitcoin Tracker</p>
          <form class="format" name="cr-form" action="#" onsubmit="return false;">
             <table border="5">
                <tr>
@@ -222,7 +222,7 @@
             </table>
 
             <p class="buy">
-               To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a> To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
+               To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a> 
             </p>
          </form>
       </section>
@@ -244,7 +244,7 @@
    <script src="datepicker.js"></script>
    <script>
       $(function() {
-         var datePickerFormat = {
+         let datePickerFormat = {
             format: 'yyyy-mm-dd'
          };
          $('#startDate').datepicker(datePickerFormat);
