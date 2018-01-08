@@ -24,42 +24,36 @@ body {
    float: left;
 }
 
+
 li {
    list-style: none;
    float: right;
    font-weight: 500;
-   padding: 8px;
 }
 
 nav {
    height: 60px;
    background-color: black;
-   margin: auto 0;
-   font-weight: 500;
+   font-weight: 600;
 }
 
 nav li {
-   width: 16%;
-   padding-left: 2px;
+   width: 12%;
    display: block;
+   float: right;
 }
 
 li a {
-   display: block;
+   display: inline-block;
    color: white;
-   font-size: 15px;
-   border: 3px #007faa groove;
-   height: 100%;
-   margin-right: 5px;
-   padding: 5px;
+   font-size: 90%;
+   margin-top: 20%;
    overflow: hidden;
    text-align: center;
-   border-radius: 5px;
 }
 
 li a:hover:not(.active) {
-   background-color: #C8CFDF;
-   font-weight: 600;
+   font-weight: 500;
    color: red;
 }
 
@@ -85,7 +79,7 @@ h1 {
 
 .transbox {
    background-color: #ffffff;
-   filter: alpha(opacity=80);
+   filter: alpha(opacity=90);
    outline-color: invert;
    border-radius: 5px;
    border-color: #8b0000;
@@ -93,19 +87,18 @@ h1 {
    padding: 10px;
    font-weight: 800;
    border: 7px ridge #007fAA;
-   max-width: 500px;
-   margin: 20px auto;
+   max-width: 400px;
+   margin: 0px auto;
 }
 
 table {
-   margin: 20px auto;
+   margin: 0px auto;
    padding: 10px;
    border-radius: 6px;
    font-weight: 800;
    background-color: #ffffff;
    border: 5px solid #007fAA;
-   max-width: 500px;
-  
+   max-width: 400px;
 }
 
 th {
