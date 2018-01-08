@@ -40,6 +40,7 @@ nav li {
    width: 12%;
    display: block;
    float: right;
+   padding-top: 15px;
 }
 
 li a {
@@ -48,6 +49,7 @@ li a {
    overflow: hidden;
    text-align: center;
    margin: auto;
+
 }
 
 li a:hover:not(.active) {
