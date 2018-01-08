@@ -24,7 +24,6 @@ body {
    float: left;
 }
 
-
 li {
    list-style: none;
    float: right;
@@ -47,9 +46,9 @@ li a {
    display: inline-block;
    color: white;
    font-size: 90%;
-   margin-top: 25%;
    overflow: hidden;
    text-align: center;
+   margin-top: 15%;
 }
 
 li a:hover:not(.active) {
