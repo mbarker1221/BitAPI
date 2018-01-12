@@ -4,15 +4,15 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width">
-   <title>repl.it</title>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
    <link href="index.css" rel="stylesheet" type="text/css">
-   <link href="datepicker.css" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Nunito:300i" rel="stylesheet">
+   <link href="accounting.js" type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <title>Bitcoin data tracker, exchange calculator and news feed</title>
 </head>
+<body class="preload">
 
-<body>
    <div id="mySidenav" class="sidenav">
       <nav role="navigation" class="nav-bar" id="nav-start">
          <img class="icon" alt="Bitcoin Logo" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRbsSS0Vl5PjZP3gh_TRX8SwrJgs2f3OWPV5QcBMHYaSavFkG9uNcRKwT_1K-h134bEjFK-dsE&usqp=CAE" />
@@ -22,121 +22,117 @@
          <a data-page="news-page" class="menu" id="news-page" href="#" onclick="getNews()">News</a>
       </nav>
    </div>
-
    <div id="main">
-      <main role="main">
-         <section class="start-page page">
-            <h1>BITMETRICS</h1>
-            <p class="subheader2">Bitcoin Tracker</p>
-            <form class="format" name="cr-form" action="#" onsubmit="return false;">
-               <table border="5">
-                  <tr>
-                     <th colspan="2" class="firstValue">
-                        <br>
-                     </th>
-                  </tr>
-                  <tr>
-                     <td class="openday"> Price at market open:</td>
-                     <td><span id="openday"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="highDay"> Today's high:</td>
-                     <td><span id="todaysHigh"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="lowDay"> Today's low:</td>
-                     <td><span id="todaysLow"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="marketCap"> Market Cap:</td>
-                     <td><span id="marketCap"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="twentyfour"> 24 Hour Change:</td>
-                     <td><span id="twentyfour"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="pctChange"> 24 Hour % Change:</td>
-                     <td><span id="pctChange"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="supply"> Supply:</td>
-                     <td><span id="supply"></span></td>
-                  </tr>
-               </table>
 
-            </form>
-         </section>
+      <section class="start-page page">
+         <h1>BITMETRICS</h1>
+         <p class="subheader1">Bitcoin and Cryptocurrency price data, exchange rate calculator and financial news </p>
+         <form class="format" name="cr-form" action="#" onsubmit="return false;">
+            <table border="5">
+               <tr>
+                  <th colspan="2" class="firstValue">
+                     <br>
+                  </th>
+               </tr>
+               <tr>
+                  <td class="openday"> Price at market open:</td>
+                  <td><span id="openday"></span></td>
+               </tr>
+               <tr>
+                  <td class="highDay"> Today's high:</td>
+                  <td><span id="todaysHigh"></span></td>
+               </tr>
+               <tr>
+                  <td class="lowDay"> Today's low:</td>
+                  <td><span id="todaysLow"></span></td>
+               </tr>
+               <tr>
+                  <td class="marketCap"> Market Cap:</td>
+                  <td><span id="marketCap"></span></td>
+               </tr>
+               <tr>
+                  <td class="twentyfour"> 24 Hour Change:</td>
+                  <td><span id="twentyfour"></span></td>
+               </tr>
+               <tr>
+                  <td class="pctChange"> 24 Hour % Change:</td>
+                  <td><span id="pctChange"></span></td>
+               </tr>
+               <tr>
+                  <td class="supply"> Supply:</td>
+                  <td><span id="supply"></span></td>
+               </tr>
+            </table>
+         </form>
+      </section>
 
+      <section class="crypto-page page">
+         <h1>CRYPTO TRACKER</h1>
+         <p class="subheader2">Results shown in USD</p>
+         <form class="format" name="cr-form" action="#" onsubmit="return false;">
+            <table border="5" class="crypto">
+               <tr>
+                  <th colspan="2" class="firstValue">
+                     <br>
+                  </th>
+               </tr>
+               <tr>
+                  <td class="LITE">LITE - Litecoin</td>
+                  <td><span id="lite"></span></td>
+               </tr>
+               <tr>
+                  <td class="IOT">IOTA - Iota</td>
+                  <td><span id="IOT"></span></td>
+               </tr>
+               <tr>
+                  <td class="OMNI">ONMI - Omni</td>
+                  <td><span id="OMNI"></span></td>
+               </tr>
+               <tr>
+                  <td class="QTUM">QTUM - QTUM</td>
+                  <td><span id="QTUM"></span></td>
+               </tr>
+               <tr>
+                  <td class="ZEC">ZEC - Z-Cash</td>
+                  <td><span id="ZEC"></span></td>
+               </tr>
+               <tr>
+                  <td class="BTG">BTG - Bitcoin Gold</td>
+                  <td><span id="BTG"></span></td>
+               </tr>
+               <tr>
+                  <td class="ETH">ETH - Etherum</td>
+                  <td><span id="ETH"></span></td>
+               </tr>
+               <tr>
+                  <td class="BCH">BCH - Bitcoin Cash</td>
+                  <td><span id="BCH"></span></td>
+               </tr>
+               <tr>
+                  <td class="GEO">GEO - GeoCoin</td>
+                  <td><span id="GEO"></span></td>
+               </tr>
+               <tr>
+                  <td class="ETC">ETC - Ethereum Classic</td>
+                  <td><span id="ETC"></span></td>
+               </tr>
+               <tr>
+                  <td class="XRP">XRP - Ripple</td>
+                  <td><span id="XRP"></span></td>
+               </tr>
+            </table>
+         </form>
+      </section>
 
-         <section class="crypto-page page">
-            <h1>CRYPTO TRACKER</h1>
-            <p class="subheader2">Results calculated in USD</p>
-            <form class="format" name="cr-form" action="#" onsubmit="return false;">
+      <section class="calc-page page">
+         <h1>YOUR WALLET</h1>
 
-               <table border="5" class="crypto">
-                  <tr>
-                     <th colspan="2" class="firstValue">
-                        <br>
-                     </th>
-                  </tr>
-                  <tr>
-                     <td class="LITE">LITE - Litecoin</td>
-                     <td><span id="lite"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="IOT">IOTA - Iota</td>
-                     <td><span id="IOT"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="OMNI">ONMI - Omni</td>
-                     <td><span id="OMNI"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="QTUM">QTUM - QTUM</td>
-                     <td><span id="QTUM"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="ZEC">ZEC - Z-Cash</td>
-                     <td><span id="ZEC"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="BTG">BTG - Bitcoin Gold</td>
-                     <td><span id="BTG"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="ETH">ETH - Etherum</td>
-                     <td><span id="ETH"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="BCH">BCH - Bitcoin Cash</td>
-                     <td><span id="BCH"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="GEO">GEO - GeoCoin</td>
-                     <td><span id="GEO"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="ETC">ETC - Ethereum Classic</td>
-                     <td><span id="ETC"></span></td>
-                  </tr>
-                  <tr>
-                     <td class="XRP">XRP - Ripple</td>
-                     <td><span id="XRP"></span></td>
-                  </tr>
-               </table>
-            </form>
-         </section>
-
-
-         <section class='calc-page page'>
-            <h1>YOUR WALLET</h1>
-            <p class="subheader2">Number of bitcoins to exchange:</p>
-            <form class="format" name="c-form" action="#" onsubmit="return false;">
-
-               <input type='number' name='bitcoinAmount' id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
-               <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
-            </form>
+         <p class="subheader2">Number of bitcoins to exchange:</p>
+         <form class="format" name="c-form" action="#" onsubmit="return false;">
+            <input type="number" name="bitcoinAmount" id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
+            <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
+         </form>
+         <main role="main" aria-live="polite">
             <table border="5" class="exchangeOutput">
                <tr>
                   <th colspan="2"><span class="exchangeRates">Market Exchange Rates<br></span>
@@ -183,26 +179,22 @@
                   <td><span id="AUD"></span></td>
                </tr>
             </table>
+         </main>
+      </section>
 
-            <p class="buy">
-               To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
-            </p>
-         </section>
-
-         <section class="news-page page">
-            <h1>NEWS</h1>
-            <p class="subheader2">Current Headlines</p>
-            <form class="format" name="n-form" action="#" onsubmit="return false;">
-               <div class="stories transbox">
-               </div>
-            </form>
-         </section>
-      </main>
+      <section class="news-page page">
+         <h1>HEADLINES</h1>
+         <p class="subheader1">Today's Bitcoin News</p>
+         <form class="format" name="n-form" action="#" onsubmit="return false;">
+            <div class="stories transbox">
+            </div>
+         </form>
+      </section>
 
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <script src="index.js"></script>
-      <script src="datepicker.js"></script>
    </div>
+   
 </body>
 
 </html>
